@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio website of JAVED ANSARI">
+    <meta name="keywords" content="HTML, CSS, JavaScript, jquery, animations, intro, Javed">
+    <meta name="author" content="Javed Ansari">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png"/>
+    <link rel="shortcut icon" href="favicon.png" type="image/png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shanti&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>findJaved</title>
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+        <nav>
+            <div id="logo" onclick = " window.location.href = '#home' ">
+                <img src="Logo 1.png" alt="logo">
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a class="menuBtn" href="#home">home</a></li>
+                    <li><a class="menuBtn" href="#about">about</a></li>
+                    <li><a class="menuBtn" href="#service">services</a></li>
+                    <li><a class="menuBtn" href="#skill">skills</a></li>
+                    <li><a class="menuBtn" href="#work">work</a></li>
+                    <li><a class="menuBtn" href="#connect">connect</a></li>
+                </ul>
+            </div>
+            <div class="responsive">
+                <ul>
+                    <li><a class="menuBtn" href="#home">home</a></li>
+                    <li><a class="menuBtn" href="#about">about</a></li>
+                    <li><a class="menuBtn" href="#service">services</a></li>
+                    <li><a class="menuBtn" href="#skill">skills</a></li>
+                    <li><a class="menuBtn" href="#work">work</a></li>
+                    <li><a class="menuBtn" href="#connect">connect</a></li>
+                </ul>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div class="iconBar">
+                    <a href="javascript:void(0);">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div id="contact" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                    <a href="#connect" ><button>contact</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- home -->
+    <section id="home">
+        <!-- left side -->
+        <div id="leftHome">
+            <div id="homeText">
+                <h1 id="heading">hi!<br>i'm <span class="txt_type" data-wait = "1500" data-words ='["Javed", "Developer"]'></span></h1>
+                <h4 id="intro">full stack web developer, design and build dynamic website</h4>
+                <button id="workBtn" onclick = " window.location.href = '#work' " onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">work <img src="work logo.png" alt="work logo"></button>
+            </div>
+        </div>
+        <!-- right side -->
+        <div id="rightHome">
+            <img src="photo.png" alt="photo">
+        </div>
+    </section>
+    <!-- about -->
+    <section id="about">
+        <main class="sMain">
+            <div id="leftAbout">
+                <div class="lTitle">
+                    <h3 class="lDescription" id="aboutDesc">who am i?</h3>
+                    <h1 class="lBigTitle" id="aboutBtitle">about</h1>
+                </div>
+            </div>
+            <div id="rightAbout">
+                <div id="aboutText">
+                    <p>
+                        HI, I am Javed. I’m a web developer with serious passion for UI effects,
+                        animations, and creating dynamic responsive website with back-end 
+                        functionality. I don’t like to define myself by the work I’ve done. I 
+                        define myself by the work I want to do. I’m never satisfied to just come
+                        up with ideas. Instead I have an almost impulsive need to act on them. I
+                        prefer to keep learning, continue challenging myself.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- services -->
+    <section id="service">
+        <main class="bMain">
+            <div id="upService">
+                <div class="upTitle">
+                    <h3 class="upDescription">what i provide?</h3>
+                    <h1 class="upBigTitle">services</h1>
+                </div>
+            </div>
+            <div id="downService">
+                <div id="services">
+                    <div class="sBox" id="sBox1">
+                        <img class="sPic" src="resp icon.png" alt="responsive">
+                        <h4 class="sTitle">responsive</h4>
+                        <p class="sPara">
+                            I’ll make your website
+                            look good on all devices
+                            make it more readable
+                        </p>
+                    </div>
+                    <div class="sBox" id="sBox2">
+                        <img class="sPic" src="inter icon.png" alt="interactive">
+                        <h4 class="sTitle">interactive</h4>
+                        <p class="sPara">
+                            Interaction make the user
+                            to be actively engaged 
+                            with the site and convey
+                            thoughts 
+                        </p>
+                    </div>
+                    <div class="sBox" id="sBox3">
+                        <img class="sPic" src="fast icon.png" alt="fast">
+                        <h4 class="sTitle">fast</h4>
+                        <p class="sPara">
+                            Load your site faser and 
+                            make it lag free especially 
+                            for users with slow data 
+                            connection
+                        </p>
+                    </div>
+                    <div class="sBox" id="sBox4">
+                        <img class="sPic" src="dynamic icon.png" alt="dynamic">
+                        <h4 class="sTitle">dynamic</h4>
+                        <p class="sPara">
+                            I’ll provide life to website
+                            make it dynamic and 
+                            change according to user
+                            specification
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- skills -->
+    <section id="skill">
+        <main class="sMain">
+            <div id="leftSkill">
+                <div class="lTitle">
+                    <h3 class="lDescription">my specialty</h3>
+                    <h1 class="lBigTitle">skills</h1>
+                </div>
+            </div>
+            <div id="rightSkill">
+                <div id="skills">
+                    <div class="skillDiv">
+                        <p class="skillTag">Css3</p>
+                        <div class="bar">
+                            <div class="barProgress" id="css3">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skillDiv">
+                        <p class="skillTag">Html5</p>
+                        <div class="bar">
+                            <div class="barProgress" id="html5">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skillDiv">
+                        <p class="skillTag">javascript</p>
+                        <div class="bar">
+                            <div class="barProgress" id="javascript">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skillDiv">
+                        <p class="skillTag">jquery</p>
+                        <div class="bar">
+                            <div class="barProgress" id="jquery">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skillDiv">
+                        <p class="skillTag">React</p>
+                        <div class="bar">
+                            <div class="barProgress" id="react">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- work -->
+    <section id="work">
+        <main class="bMain">
+            <div id="upWork">
+                <div class="upTitle">
+                    <h3 class="upDescription">my projects</h3>
+                    <h1 class="upBigTitle">work</h1>
+                </div>
+            </div>
+            <div id="downWork">
+                <div id="works">
+                    <!-- prev -->
+                    <button id="prev" onclick="prev()" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                        <img src="previous.png" alt="previous">
+                    </button>
+                    <div id="projects">
+                        <div class="tab" id="tab1">
+                            <a href="https://ofcl-javed.github.io/MUSIC-PLAYER/" target="_JAVED">
+                                <div class="project">
+                                    <img src="work1.jpg" alt="work1">
+                                    <div class="workHover">
+                                        This is music player where you can listen song <br>Click to view
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://ofcl-javed.github.io/NOTES/" target="_JAVED">
+                                <div class="project">
+                                    <img src="work2.jpg" alt="work2">
+                                    <div class="workHover">
+                                        You can add Notes to this Website and can have them for lifetime if you don't delete them
+                                        <br> Click to view
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://ofcl-javed.github.io/tictactoe/" target="_JAVED">
+                                <div class="project">
+                                    <img src="work3.jpg" alt="work3">
+                                    <div class="workHover">
+                                        Play tic tac toe with your friends or with computer <br> Click to view
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://ofcl-javed.github.io/foodietherapy.github.io/" target="_JAVED">
+                                <div class="project">
+                                    <img src="work4.jpg" alt="work4">
+                                    <div class="workHover">
+                                        Non-dynamic Food website of restaurant for the foodie one <br> Click to view
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- next -->
+                    <button id="next" onclick="next()" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                        <img src="next.png" alt="next">
+                    </button>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- contact -->
+    <section id="connect">
+        <main class="bMain">
+            <div id="upConnect">
+                <div class="upTitle">
+                    <h3 class="upDescription">get in touch</h3>
+                    <h1 class="upBigTitle">connect</h1>
+                </div>
+            </div>
+            <div id="downConnect">
+                <div id="contactBox">
+                    <div id="form">
+                        <form action="https://formspree.io/f/xknkvdww" method="post" id="review" >
+                            <textarea type="text" name="msg" id="msg" placeholder="your message" required></textarea>
+                            <input type="text" name="name" id="name" placeholder="name" required>
+                            <input type="email" name="email" id="email" placeholder="email" required>
+                            <input type="submit" value="send" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                        </form>
+                    </div>
+                    <div id="buttons">
+                        <a href="#" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                            <div id="up">
+                                <img src="up icon.png" alt="home">
+                            </div>
+                        </a>
+                        <div id="socials">
+                            <a href="https://www.instagram.com/__.javed_/" target="_JAVED" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                                <div class="socialMedia" id="socialMedia1">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Ofcl-Javed" target="_JAVED" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                                <div class="socialMedia" id="socialMedia2">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </a>
+                            <a href="https://twitter.com/__Javed_" target="_JAVED" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                                <div class="socialMedia" id="socialMedia3">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/javed-ansari-989597218/" target="_JAVED" onmousedown="this.style.transform = 'scale(0.9)';" onmouseup="this.style.transform = 'scale(1)';">
+                                <div class="socialMedia" id="socialMedia4">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+            
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>

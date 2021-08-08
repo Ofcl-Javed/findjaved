@@ -1,0 +1,1184 @@
+:root{
+    --menu_font : #2D1A32;
+    --button: #211C22;
+    --button-bg: #EDC4B3;
+    --title: #211C22;
+    --btn_Shadow: rgba(119, 73, 54, 0.3);
+    --bg: #F5F2F2;
+    --homeBg: 102.19deg, #94716B 2.34%, #FFFFFF 100%;
+    --rectBg: #FBFBFB;
+    --rectShadow: rgba(0, 0, 0, 0.15);
+    --picShadow: rgba(0, 0, 0, 0.2);
+    --bgText: rgba(245, 242, 242, 0.9);
+    --text: #676069;
+    --barBg:  rgba(172, 141, 136, 0.3);
+    --barProgress: #CC9C9C;
+    --barShadow: rgba(0, 0, 0, 0.25);
+    --wrkbtnShadow: rgba(0, 0, 0, 0.2);
+    --projectShadow: rgba(0, 0, 0, 0.3);
+    --wrkOverlay: #00000086;
+    --formText: rgba(103, 96, 105, 0.8);
+    --formBg:rgba(204, 156, 156, 0.7);
+    --formSend: #EDC4B3;
+    --menuBg: #AC8D88;
+    --menuActive: #ebebeb;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 5rem;
+    position: fixed;
+    z-index: 100;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+    transition: 0.2s;
+}
+nav{
+    position: relative;
+    
+}
+nav, #menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo img{
+    width: 6.5rem;
+    cursor: pointer;
+}
+#menu ul{
+    list-style-type: none;
+    font-size: 1.8rem;
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+}
+#menu ul li{
+    padding: 0 1rem;
+    letter-spacing: .1rem;
+    text-indent: .5rem;
+    text-align: center;
+}
+.menuBtn{
+    text-decoration: none;
+    color: var(--menu_font);
+    -webkit-transition: all ease-out 250ms;
+    -moz-transition: all ease-out 250ms;
+    -o-transition: all ease-out 250ms;
+    -ms-transition: all ease-out 250ms;
+    transition: all ease-out 250ms;
+}
+#contact button{
+    font-size: 1.9rem;
+    width: 11rem;
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--button-bg);
+    border-radius: .5rem;
+    border: none;
+    box-shadow: -.2rem .35rem .3rem var(--btn_Shadow);
+    padding: .6rem 1.5rem;
+}
+#contact button a{
+    text-decoration: none;
+    color: var(--button);
+}
+#contact{
+    margin-right: 3rem;
+}
+.scrolling{
+    background: var(--menuBg);
+}
+.active{
+    font-size: 2rem;
+    color: var(--menuActive);
+}
+.respActive{
+    border-bottom: .1rem solid var(--menuActive);
+}
+.responsive{
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 100%;
+    background-color: var(--button-bg);
+    width: 25rem;
+    padding: 2rem 1rem;
+    box-shadow: 0rem .3rem 1rem .5rem var(--wrkbtnShadow);
+    -webkit-transition: 0.2s ease display;
+    -moz-transition: 0.2s ease display;
+    -o-transition: 0.2s ease display;
+    -ms-transition: 0.2s ease display;
+    transition: 0.2s ease display;
+}
+.responsive ul{
+    list-style-type: none;
+    font-size: 2.25rem;
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+}
+.responsive ul li{
+    padding: .5rem 1rem;
+    color: var(--button);
+    letter-spacing: .25rem;
+    text-indent: .5rem;
+    text-align: left;
+}
+.iconBar{
+    display: none;
+}
+.iconBar a{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--menu_font);
+    margin: 0 2rem;
+}
+#home{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(var(--homeBg));
+}
+#leftHome{
+    display: grid;
+}
+#homeText{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    row-gap: 2rem;
+    grid-template-columns: minmax(min-content, 39rem);
+}
+#rightHome{
+    display: grid;
+    justify-content: end;
+    align-content: end;
+}
+#heading{
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+    font-size: 5rem;
+    font-weight: normal;
+    color: var(--title);
+    text-indent: 0;
+}
+.txt_type .txt{
+    border-right: 0.2rem solid var(--title);
+}
+#intro{
+    font-size: 2.2rem;
+    color: var(--menu_font);
+    font-weight: 100;
+    letter-spacing: .25rem;
+    line-height: 3rem;
+    -webkit-text-transform: lowercase;
+    -moz-text-transform: lowercase;
+    -o-text-transform: lowercase;
+    -ms-text-transform: lowercase;
+    text-transform: lowercase;
+}
+#workBtn{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    width: fit-content;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    text-indent: .5rem;
+    text-align: center;
+    align-items: center;
+    color: var(--button);
+    background-color: var(--button-bg);
+    border-radius: 1rem;
+    border: none;
+    box-shadow: -.3rem .45rem .3rem var(--btn_Shadow);
+    padding: .5rem 1.5rem .5rem 1.8rem;
+    display: flex;
+}
+#workBtn img{
+    width: 4.7rem;
+    margin-left: 1.8rem;
+}
+#rightHome img{
+    width: 45rem;
+}
+#about, #skill, #service, #work, #connect{
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    background-color: var(--bg);
+}
+.sMain{
+    display: grid;
+    width: 100vw;
+    height: 75vh;
+    grid-template-columns: 1fr 2fr;
+    background:var(--rectBg);
+    box-shadow: 0rem 0rem .4rem .1rem var(--rectShadow);
+}
+#leftAbout, #leftSkill{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#rightAbout, #rightSkill{
+    display: grid;
+    justify-items: start;
+}
+.lTitle{
+    padding: 2rem;
+    display: grid;
+}
+.lDescription{
+    align-self: end;
+    font-size: 1.8rem;
+    font-weight: 100;
+    padding: 1rem;
+    color: var(--text);
+    -webkit-text-transform:capitalize;
+    -moz-text-transform:capitalize;
+    -o-text-transform:capitalize;
+    -ms-text-transform:capitalize;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    border-bottom: 0.1rem solid var(--button-bg);
+}
+.lBigTitle{
+    font-size: 10rem;
+    font-weight: 100;
+    font-family: 'Shanti', sans-serif;
+    color: var(--button-bg);
+    -webkit-text-transform:capitalize;text-transform:capitalize;
+    -moz-text-transform:capitalize;text-transform:capitalize;
+    -o-text-transform:capitalize;text-transform:capitalize;
+    -ms-text-transform:capitalize;text-transform:capitalize;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+}
+#aboutText{
+    align-self: center;
+    padding: 2rem;
+    border-left: 0.1rem solid black;
+}
+#aboutText p{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: var(--text);
+    letter-spacing: 0.25rem;
+    line-height: 3.5rem;
+}
+#skills{
+    width: 100%;
+    align-self: center;
+    padding: 1rem 2rem;
+    border-left: 0.1rem solid black;
+}
+.skillDiv{
+    margin: 1.5rem 1.5rem 1.5rem 0.5rem;
+}
+.skillTag{
+    font-size: 2rem;
+    color: var(--text);
+    letter-spacing: 0.25rem;
+    -webkit-text-transform:capitalize;text-transform:capitalize;text-transform:capitalize;
+    -moz-text-transform:capitalize;text-transform:capitalize;text-transform:capitalize;
+    -o-text-transform:capitalize;text-transform:capitalize;text-transform:capitalize;
+    -ms-text-transform:capitalize;text-transform:capitalize;text-transform:capitalize;
+    text-transform:capitalize;
+}
+.bar{
+    width: 80%;
+    height: 1rem;
+    background: var(--barBg);
+    border-radius: 1rem;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+    position: relative;
+}
+.barProgress{
+    position: absolute;
+    height: 100%;
+}
+.progress{
+    width: 0%;
+    height: 100%;
+    background: var(--barProgress);
+    border-radius: 1rem;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+    box-shadow: 0rem .2rem .5rem var(--barShadow);
+}
+.fillProgress{
+    width: 100%;
+    -webkit-animation: fill 1s;
+    -moz-animation: fill 1s;
+    -o-animation: fill 1s;
+    -ms-animation: fill 1s;
+    animation: fill 1s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+@keyframes fill {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+#css3{
+    width: 85%;
+}
+#html5{
+    width: 80%;
+}
+#javascript{
+    width: 70%;
+}
+#jquery{
+    width: 65%;
+}
+#react{
+    width: 80%;
+}
+.bMain{
+    display: grid;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-rows: 1fr 2fr;
+    background:var(--rectBg);
+    box-shadow: 0rem 0rem .4rem .1rem var(--rectShadow);
+}
+#upService, #upWork ,#upConnect{
+    display: grid;
+    justify-content: center;
+    align-content: end;
+
+}
+#downService, #downWork, #downConnect{
+    display: grid;
+    align-content: center;
+    margin: 5rem 0;
+}
+.upTitle{
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 1fr 2fr;
+}
+.upDescription{
+    justify-self: end;
+    font-size: 1.8rem;
+    font-weight: 100;
+    padding: 1rem;
+    color: var(--text);
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    border-right: 0.1rem solid var(--button-bg);
+}
+.upBigTitle{
+    padding: 0 1rem;
+    font-size: 10rem;
+    font-weight: 100;
+    font-family: 'Shanti', sans-serif;
+    color: var(--button-bg);
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+}
+#services{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin: 0 10rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.sBox{
+    display: grid;
+    place-items: center;
+    width: 25rem;
+    height: 27rem;
+    grid-template-rows: 2fr 1fr 1fr;
+    padding: 0 2rem 2rem;
+    box-shadow: 0 .4rem .4rem 0.15rem var(--rectShadow);
+}
+.sPic{
+    width: 10rem;
+    filter:drop-shadow(.05rem .3rem .25rem var(--picShadow));
+}
+.sTitle{
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    color: var(--text);
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+}
+.sPara{
+    font-size: 1.5rem;
+    align-self: start;
+    text-align: center;
+    font-weight: 100;
+    color: var(--text);
+    letter-spacing: 0.1rem;
+}
+#works{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+#projects{
+    width: 100%;
+    box-shadow: inset 0rem 0rem 1rem .1rem var(--rectShadow);
+    padding: 2rem ;
+    border-top: none;
+    border-bottom: none;
+
+}
+.tab{
+    display: none;
+    justify-content: space-between;
+    justify-items: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-columns: repeat(4, minmax(25rem ,1fr));
+}
+#prev, #next{
+    width: fit-content;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+#prev{
+    justify-self: end;
+}
+#next{
+    justify-self: start;
+}
+#prev img , #next img{
+    filter: drop-shadow(.05rem .3rem .4rem var(--wrkbtnShadow));
+    width: 7rem;
+}
+.project{
+    position: relative;
+    box-shadow: 0 .4rem .4rem 0.15rem var(--rectShadow);
+}
+.project img{
+    width: 25rem;
+}
+.workHover{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:var(--wrkOverlay);
+    display: none;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--rectBg);
+    padding: 2rem;
+    place-items: center;
+}
+#contactBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(35rem, 1fr));
+}
+#buttons{
+    display: grid;
+    justify-content: center;
+
+}
+#socials{
+    display: flex;
+    column-gap: 2rem;
+    margin-top: 1rem;
+}
+#socials a{
+    text-decoration: none;
+}
+.socialMedia{
+    font-size: 3.5rem;
+    color: var(--rectBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background: var(--barProgress);
+    border-radius: 1.5rem;
+    box-shadow: 0rem .15rem .4rem .2rem var(--rectShadow);
+}
+#buttons a{
+    justify-self: center;
+    align-self: end;
+}
+#up{
+    background: var(--barProgress);
+    width: 3.6rem;
+    height: 4.2rem;
+    margin-bottom: 1rem;
+    border-radius: .7rem;
+    box-shadow: 0rem .3rem .4rem var(--wrkbtnShadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form{
+    justify-self: end;
+    width: 80%;
+}
+#form form{
+    display: grid;
+}
+#msg{
+    width: 100%;
+    height: 18.5rem;
+    color: var(--formText);
+    background-color: var(--formBg);
+    box-shadow: 0rem .4rem .4rem var(--rectShadow);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-family: 'Shanti', sans-serif;
+    border: none;
+    resize: none;
+    padding: 1.5rem;
+    outline: none;
+    margin-bottom: 1rem;
+}
+#name , #email{
+    height: 4rem;
+    width: 100%;
+    color: var(--formText);
+    background-color: var(--formBg);
+    box-shadow: 0rem .4rem .4rem var(--rectShadow);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    font-family: 'Shanti', sans-serif;
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    border: none;
+    padding: 1.5rem;
+    outline: none;
+    margin-bottom: 1rem;
+}
+input[type=submit]{
+    justify-self: end;
+    width: 11rem;
+    height: 3.8rem;
+    background: var(--formSend);
+    box-shadow: 0rem .3rem .4rem var(--picShadow);
+    border: none;
+    border-radius: 1rem;
+    font-family: 'Shanti', sans-serif;
+    color: var(--text);
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    text-transform: capitalize;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+#aboutDesc, #aboutBtitle,.sBox, #about_rectBox, .socialMedia{
+    opacity: 0;
+}
+#aboutDesc.animate__animated, #aboutBtitle.animate__animated, .sBox.animate__animated, #about_rectBox.animate__animated, .socialMedia.animate__animated{
+    opacity: 1;
+}
+#sBox2{
+    animation-delay: 0.4s;
+}
+#sBox3{
+    animation-delay: 0.8s;
+}
+#sBox4{
+    animation-delay: 1.2s;
+}
+#socialMedia2{
+    animation-delay: 0.3s;
+}
+#socialMedia3{
+    animation-delay: 0.6s;
+}
+#socialMedia4{
+    animation-delay: 0.9s;
+}
+@media (max-width:1100px ) {
+    #rightHome img {
+        width: 42rem;
+    }
+    #services {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        margin: 0px 6rem;
+    }
+    .sBox {
+        width: 22rem;
+        height: 24rem;
+    }
+    .sPic {
+        width: 10rem;
+    }
+    .sTitle {
+        font-size: 2rem;
+    }
+    .sPara {
+        font-size: 1.3rem;
+    }
+    #projects{
+        padding: 1.5rem;
+    }
+    .tab {
+        grid-template-columns: repeat(auto-fit, minmax(20rem ,1fr));
+    }
+    .project img {
+        width: 20.5rem;
+    }
+}
+@media (max-width:950px ){
+    html{
+        font-size: 55%;
+    }
+    #homeText {
+        margin-left: 10rem;
+    }
+}
+@media (max-width:700px ){
+    #homeText {
+        margin-left: 0rem;
+    }
+    .iconBar{
+        display: block;
+    }
+    #menu{
+        display: none;
+    }
+    #logo img {
+        width: 8.5rem;
+    }
+    #leftHome{
+        margin-left: 8rem;
+    }
+    #heading {
+        font-size: 4.5rem;
+    }
+    #intro {
+        font-size: 2rem;
+    }
+    #home {
+        grid-template-columns: 2fr 1.5fr;
+    }
+    #rightHome img {
+        width: 36rem;
+    }
+    .lBigTitle {
+        font-size: 8.5rem;
+    }
+    #aboutText p {
+        font-size: 1.65rem;
+    }
+    .upBigTitle {
+        font-size: 8.5rem;
+    }
+    #form {
+        width: 85%;
+        justify-self: center;
+    }
+    #contactBox {
+        grid-template-columns: repeat(auto-fit ,minmax(40rem, 1fr));
+    }
+}
+@media (max-width:620px ){
+    .responsive ul {
+        font-size: 1.8rem;
+    }
+    .responsive {
+        width: 21rem;
+        padding: 1.5rem 1rem;
+    }
+    #aboutText p {
+        line-height: 3rem;
+    }
+    #contact {
+        margin-right: 0;
+    }
+    #rightHome img {
+        width: 33rem;
+    }
+    #leftHome {
+        margin-left: 7rem;
+    }
+    #homeText {
+        margin-left: 0;
+    }
+    #heading {
+        font-size: 3.5rem;
+    }
+    #workBtn {
+        font-size: 2rem;
+        padding: .5rem 1rem .5rem 1rem;
+    }
+    #workBtn img {
+        width: 4rem;
+        margin-left: 1rem;
+    }
+    .sMain {
+        height: 80vh;
+        grid-template-columns: none;
+    }
+    #leftAbout, #leftSkill {
+        justify-items: start;
+    }
+    .lTitle {
+        padding: 2rem 8rem;
+    }
+    #aboutText {
+        padding: 0rem 3.5rem;
+        border: none;
+    }   
+    #aboutText p {
+        margin-right: 0rem;
+    } 
+    #rightAbout, #rightSkill {
+        align-content: start;
+    }
+    #skills {
+        width: 85%;
+        justify-self: center;
+    }
+    .bar {
+        width: 100%;
+    }
+    #services {
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        margin: 0px 8rem;
+    }
+    .sBox {
+        width: 23rem;
+        height: 25rem;
+    }
+    #prev img, #next img {
+        width: 6rem;
+    }
+    .socialMedia {
+        font-size: 3rem;
+        width: 5rem;
+        height: 5rem;
+    }
+    #up {
+        width: 3rem;
+        height: 4rem;
+    }
+    #up img {
+        width: 1.75rem;
+    }
+}
+@media (max-width:500px ){
+    .responsive {
+        width: 18rem;
+    }
+    #leftHome {
+        margin-left: 4rem;
+    }
+    #heading {
+        font-size: 3.25rem;
+    }
+    #intro {
+        font-size: 1.75rem;
+    }
+    #intro {
+        letter-spacing: 0.2rem;
+        line-height: 2.5rem;
+    }
+    #workBtn img {
+        width: 3.5rem;
+    }
+    #workBtn {
+        font-size: 1.75rem;
+    }
+    #rightHome img {
+        width: 27rem;
+    }
+    .bMain {
+        grid-template-rows: 0.75fr 2fr;
+    }
+    .upDescription {
+        font-size: 1.7rem;
+    }
+    .upBigTitle {
+        font-size: 7.5rem;
+    }
+    .sPara {
+        display: none;
+    }
+    .sTitle {
+        font-weight: 100;
+        font-size: 2.5rem;
+        align-self: end;
+    }
+    .sPic {
+        width: 12rem;
+    }
+    .sBox {
+        width: 18rem;
+        height: fit-content;
+        grid-template-rows: 2fr .6fr;
+    }
+    #services {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+    .project img {
+        width: 22.5rem;
+    }
+    #projects {
+        height: 50rem;
+        overflow: scroll;
+    }
+}
+@media (max-width:425px ){
+    #aboutText p {
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+    }
+    header {
+        padding: 0 2rem
+    }
+    #home {
+        grid-template-columns: 2fr 1fr;
+    }
+    #rightHome img {
+        position: absolute;
+        width: 33rem;
+        bottom: 0;
+        right: 0;
+    }
+    #rightHome {
+        position: relative;
+    }
+    #leftHome {
+        align-items: start;
+    }
+    #homeText {
+        margin-top: 100%;
+    }
+    #intro {
+        font-size: 1.8rem;
+    }
+    .sMain {
+        height: 90vh;
+    }
+    #services {
+        margin: 0px 4rem;
+    }
+    .sBox {
+        width: 15rem;
+        padding: 1rem;
+    }
+    .sPic {
+        width: 9rem;
+    }
+    .sTitle {
+        font-size: 2rem;
+    }
+    .upBigTitle {
+        font-size: 6.5rem;
+    }
+    .upTitle {
+        grid-template-columns: 1fr 1.5fr;
+    }
+    #contactBox {
+        row-gap: 3rem;
+    }
+    #services {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+}
+@media (max-width:375px ){
+    .responsive {
+        width: 16rem;
+    }
+    .responsive ul {
+        font-size: 1.5rem;
+    }
+    #homeText {
+        margin-top: 70%;
+    }
+    #home {
+        grid-template-columns: 2fr 0.75fr;
+    }
+    #contact button {
+        font-size: 1.6rem;
+        width: 9rem;
+        padding: .5rem 1rem;
+    }
+    .iconBar a {
+        font-size: 2.2rem;
+    }
+    #services {
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    }
+    #prev img, #next img {
+        width: 5.25rem;
+    }
+    .project img {
+        width: 20rem;
+    }
+    .tab {
+        grid-template-columns: repeat(auto-fit, minmax(14rem ,1fr));
+    }
+    #projects {
+        height: 45rem;
+    }    
+    #works {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    #contactBox {
+        row-gap: 2rem;
+    }
+}
+@media (max-width:320px ){
+    #logo img {
+        width: 7.5rem;
+    }
+    #heading {
+        font-size: 3rem;
+    }
+    #intro {
+        font-size: 1.65rem;
+        letter-spacing: 0.125rem;
+        line-height: 2.35rem;
+    }
+    #rightHome img {
+        width: 27rem;
+    }
+    .lBigTitle {
+        font-size: 8rem;
+    }
+    #aboutText {
+        padding: 0rem 2rem;
+    }
+    #aboutText p {
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        line-height: 3rem;
+    }
+    .upBigTitle {
+        font-size: 6rem;
+    }
+    .upDescription {
+        font-size: 1.6rem;
+        text-align: end;
+    }
+    .sTitle {
+        font-size: 1.8rem;
+    }
+    .sPic {
+        width: 7.5rem;
+    }
+    .sBox {
+        width: 13rem;
+    }
+    .skillTag {
+        font-size: 1.8rem;
+    }
+    #skills {
+        width: 90%;
+    }
+    #next,#prev {
+        justify-self: center;
+    }
+    #prev img, #next img {
+        width: 5rem;
+    }
+    #contactBox {
+        grid-template-columns: repeat(auto-fit ,minmax(20rem, 1fr));
+    }
+    #msg {
+        height: 16rem;
+        padding: 1rem;
+    }
+    #name, #email {
+        padding: 0.5rem 1rem;
+    }
+    input[type=submit] {
+        width: 9rem;
+        height: 3.2rem;
+        font-size: 1.8rem;
+    }
+    #up img {
+        width: 1.5rem;
+    }
+    #up {
+        width: 2.5rem;
+        height: 3.5rem;
+    }
+    .socialMedia {
+        font-size: 2.8rem;
+        width: 4.75rem;
+        height: 4.75rem;
+    }
+    .bar{
+        height: .8rem;
+    }
+    #skills {
+        padding: 1rem 1.5rem;
+    }
+    #contactBox {
+        row-gap: 3rem;
+    }
+}
+@media (max-height:520px ){
+    #rightHome img {
+        width: 36rem;
+    }
+    
+    #heading {
+        font-size: 4rem;
+    }
+    #intro {
+        font-size: 2rem;
+        letter-spacing: 0.15rem;
+        line-height: 2.5rem;
+    }
+    #workBtn {
+        font-size: 2rem;
+        padding: 0.5rem 1rem .5rem 1rem;
+    }
+    #workBtn img {
+        width: 4rem;
+        margin-left: 0.8rem;
+    }
+    .lBigTitle {
+        font-size: 8.5rem;
+    }
+    #aboutText p {
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        letter-spacing: 0.2rem;
+        line-height: 2.7rem;
+    }
+    .sMain {
+        height: 85vh;
+    }
+    .upBigTitle {
+        font-size: 8.5rem;
+    }
+    #projects {
+        height: 25rem;
+        overflow: scroll;
+    }
+    #works {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    #form {
+        width: 90%;
+    }
+    #msg {
+        height: 14.5rem;
+    }
+    #name, #email {
+        height: 3rem;
+        padding: 0.5rem
+    }
+    input[type=submit] {
+        width: 10rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+    .sBox {
+        width: 19rem;
+        height: 21rem;
+        padding: 0 1rem 2rem;
+    }
+    .sPic {
+        width: 8.5rem;
+    }
+    .sTitle {
+        font-size: 1.8rem;
+    }
+    #services {
+        margin: 0px 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    }
+
+}
+@media (max-height:400px ){
+    #logo img {
+        width: 6.5rem;
+    }
+    #rightHome img {
+        width: 33rem;
+    }
+    #homeText {
+        margin-top: 5rem;
+        margin-left: 2rem;
+    }
+    #contact button {
+        font-size: 1.5rem;
+        width: 9rem;
+    }
+    .iconBar a {
+        font-size: 2rem;
+    }
+}
